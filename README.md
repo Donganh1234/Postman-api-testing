@@ -38,6 +38,9 @@ Các nội dung thực hiện gồm:
 
 ### API Base URL
 https://jsonplaceholder.typicode.com
+
+---
+
 # 4. Chi tiết thực hiện
 
 ## 4.1. Test Case 01 - GET All Users
@@ -185,6 +188,8 @@ pm.test("Response body is empty", function () {
 ### Hình ảnh minh họa
 <img width="1915" height="1032" alt="image" src="https://github.com/user-attachments/assets/4dc90583-8919-466b-b00f-1ef1abe06537" />
 
+---
+
 ## 5. Đánh giá kết quả
 Qua quá trình thực hành, các API Request đều trả về kết quả phù hợp với kết quả mong đợi.
 Các Test Case đã thực hiện:
@@ -200,6 +205,9 @@ Bài thực hành đã kiểm tra cả:
 - Kiểu dữ liệu Response.
 - Giá trị các trường dữ liệu.
 - Trường hợp API trả về lỗi.
+
+---
+  
 ## 6. Kết luận
 Qua bài thực hành, em đã làm quen với công cụ Postman và quy trình kiểm thử REST API.
 Em đã thực hiện được:
