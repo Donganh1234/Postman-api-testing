@@ -84,4 +84,24 @@ pm.test("User ID is 1", function () {
 ## Hình ảnh minh họa
 <img width="1920" height="1029" alt="image" src="https://github.com/user-attachments/assets/cc76185c-1c52-4630-83c5-f2d53fa77580" />
 
+## 4.3. Test Case 03 - GET Invalid User
+### Mục đích
+Kiểm tra API khi yêu cầu một User không tồn tại.
+### Request
+GET https://jsonplaceholder.typicode.com/users/9999
+### Kết quả mong đợi
+HTTP Status Code: 404 Not Found
+Response body là {}.
+### Test Script
+pm.test("Status code is 404", function () {
+    pm.response.to.have.status(404);
+});
+
+pm.test("Response body is empty", function () {
+    const data = pm.response.json();
+    pm.expect(data).to.eql({});
+});
+### Hình ảnh minh họa 
+<img width="1920" height="1028" alt="image" src="https://github.com/user-attachments/assets/968e6aa7-7c53-4b1e-937a-f675af5ec6f0" />
+
 
