@@ -43,9 +43,7 @@ https://jsonplaceholder.typicode.com
 ## 4.1. Test Case 01 - GET All Users
 
 ### Mục đích
-
 Kiểm tra API có trả về danh sách Users hay không.
-
 ### Request
 GET https://jsonplaceholder.typicode.com/users
 ### Kết quả mong đợi
@@ -65,6 +63,7 @@ pm.test("Response contains users", function () {
 });
 ### Hình ảnh minh họa
 <img width="1917" height="1025" alt="image" src="https://github.com/user-attachments/assets/42cb0c5a-f932-41f0-8f3f-3f5f461c6d6c" />
+
 ## 4.2 Test Case 02 - GET User By ID
 ### Mục đích
 Kiểm tra khả năng lấy thông tin một User cụ thể thông qua ID.
@@ -82,3 +81,7 @@ pm.test("User ID is 1", function () {
     const data = pm.response.json();
     pm.expect(data.id).to.eql(1);
 });
+## Hình ảnh minh họa
+<img width="1920" height="1029" alt="image" src="https://github.com/user-attachments/assets/cc76185c-1c52-4630-83c5-f2d53fa77580" />
+
+
