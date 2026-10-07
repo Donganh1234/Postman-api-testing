@@ -37,8 +37,6 @@ Các nội dung thực hiện gồm:
 - JSONPlaceholder REST API
 
 ### API Base URL
-
-```text
 https://jsonplaceholder.typicode.com
 # 4. Chi tiết thực hiện
 
@@ -49,14 +47,12 @@ https://jsonplaceholder.typicode.com
 Kiểm tra API có trả về danh sách Users hay không.
 
 ### Request
-
-```text
 GET https://jsonplaceholder.typicode.com/users
-Kết quả mong đợi
+#### Kết quả mong đợi
 - HTTP Status Code: 200 OK
 - Response trả về một mảng dữ liệu Users.
 - Mảng Users có ít nhất một phần tử.
-Test Script:
+#### Test Script:
 pm.test("Status code is 200", function () {
     pm.response.to.have.status(200);
 });
