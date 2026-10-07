@@ -40,3 +40,29 @@ Các nội dung thực hiện gồm:
 
 ```text
 https://jsonplaceholder.typicode.com
+# 4. Chi tiết thực hiện
+
+## 4.1. Test Case 01 - GET All Users
+
+### Mục đích
+
+Kiểm tra API có trả về danh sách Users hay không.
+
+### Request
+
+```text
+GET https://jsonplaceholder.typicode.com/users
+Kết quả mong đợi
+- HTTP Status Code: 200 OK
+- Response trả về một mảng dữ liệu Users.
+- Mảng Users có ít nhất một phần tử.
+Test Script:
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Response contains users", function () {
+    const data = pm.response.json();
+    pm.expect(data).to.be.an("array");
+    pm.expect(data.length).to.be.greaterThan(0);
+});
