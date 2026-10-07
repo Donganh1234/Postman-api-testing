@@ -2,7 +2,7 @@
 
 ## 1. Thông tin bài thực hành
 
-- **Họ và tên:** Ánh Đồng
+- **Họ và tên:** Đồng Thị Ánh
 - **Công cụ sử dụng:** Postman
 - **API sử dụng:** JSONPlaceholder
 - **Repository:** Postman-api-testing
@@ -48,17 +48,37 @@ Kiểm tra API có trả về danh sách Users hay không.
 
 ### Request
 GET https://jsonplaceholder.typicode.com/users
-#### Kết quả mong đợi
+### Kết quả mong đợi
 - HTTP Status Code: 200 OK
 - Response trả về một mảng dữ liệu Users.
 - Mảng Users có ít nhất một phần tử.
-#### Test Script:
+### Test Script:
 pm.test("Status code is 200", function () {
     pm.response.to.have.status(200);
 });
+
 
 pm.test("Response contains users", function () {
     const data = pm.response.json();
     pm.expect(data).to.be.an("array");
     pm.expect(data.length).to.be.greaterThan(0);
+});
+### Hình ảnh minh họa
+<img width="1917" height="1025" alt="image" src="https://github.com/user-attachments/assets/42cb0c5a-f932-41f0-8f3f-3f5f461c6d6c" />
+## 4.2 Test Case 02 - GET User By ID
+### Mục đích
+Kiểm tra khả năng lấy thông tin một User cụ thể thông qua ID.
+### Request
+GET https://jsonplaceholder.typicode.com/users/1
+### Kết quả mong đợi
+- HTTP Status Code: 200 OK
+- User trả về có id = 1.
+### Test Script
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("User ID is 1", function () {
+    const data = pm.response.json();
+    pm.expect(data.id).to.eql(1);
 });
